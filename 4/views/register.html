@@ -1,0 +1,32 @@
+{{define "title"}}Register{{end}}
+
+{{define "content"}}
+	<div class="notification" id="register-error"></div>
+	
+	<h2>Create Your Account</h2>
+	<p>Join us today and get access to all our features.</p>
+	
+	<form action="/register" method="post" id="register-form">
+		<div class="form-group">
+			<label for="name">Full Name:</label>
+			<input type="text" id="name" name="name" placeholder="Enter your full name" required>
+		</div>
+		
+		<div class="form-group">
+			<label for="email">Email:</label>
+			<input type="email" id="email" name="email" placeholder="Enter your email address" required>
+		</div>
+		
+		<div class="form-group">
+			<label for="password">Password:</label>
+			<input type="password" id="password" name="password" placeholder="Create a strong password" required>
+			<small style="color: #666; font-size: 0.9rem;">Password should be at least 8 characters long.</small>
+		</div>
+		
+		<div class="form-group">
+			<input type="submit" value="Create Account">
+		</div>
+	</form>
+	
+	<p>Already have an account? <a href="/login">Login here</a>.</p>
+{{end}}

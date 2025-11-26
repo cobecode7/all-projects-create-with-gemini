@@ -1,0 +1,68 @@
+{{define "base.html"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{{.title}} - Gemini Project</title>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="/static/css/layout.css">
+	<link rel="stylesheet" href="/static/css/{{.title}}.css">
+</head>
+<body>
+	<header>
+		<div class="container">
+			<h1>Gemini Project</h1>
+			<p>A modern web application built with Go/Gin Framework</p>
+		</div>
+	</header>
+
+	<main>
+		<div class="container">
+			{{template "content" .}}
+		</div>
+	</main>
+
+	<footer>
+		<div class="container">
+			<p>&copy; 2023 Gemini Project. All rights reserved.</p>
+		</div>
+	</footer>
+
+	<script src="/static/js/main.js"></script>
+</body>
+</html>
+{{end}}
+
+{{define "title"}}Register{{end}}
+
+{{define "content"}}
+	<div class="notification" id="register-error"></div>
+
+	<h2>Create Your Account</h2>
+	<p>Join us today and get access to all our features.</p>
+
+	<form action="/register" method="post" id="register-form">
+		<div class="form-group">
+			<label for="name">Full Name:</label>
+			<input type="text" id="name" name="name" placeholder="Enter your full name" required>
+		</div>
+
+		<div class="form-group">
+			<label for="email">Email:</label>
+			<input type="email" id="email" name="email" placeholder="Enter your email address" required>
+		</div>
+
+		<div class="form-group">
+			<label for="password">Password:</label>
+			<input type="password" id="password" name="password" placeholder="Create a strong password" required>
+			<small style="color: #666; font-size: 0.9rem;">Password should be at least 8 characters long.</small>
+		</div>
+
+		<div class="form-group">
+			<input type="submit" value="Create Account">
+		</div>
+	</form>
+
+	<p>Already have an account? <a href="/login">Login here</a>.</p>
+{{end}}

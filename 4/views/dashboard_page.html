@@ -1,0 +1,88 @@
+{{define "base.html"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{{.title}} - Gemini Project</title>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="/static/css/layout.css">
+	<link rel="stylesheet" href="/static/css/{{.title}}.css">
+</head>
+<body>
+	<header>
+		<div class="container">
+			<h1>Gemini Project</h1>
+			<p>A modern web application built with Go/Gin Framework</p>
+		</div>
+	</header>
+
+	<main>
+		<div class="container">
+			{{template "content" .}}
+		</div>
+	</main>
+
+	<footer>
+		<div class="container">
+			<p>&copy; 2023 Gemini Project. All rights reserved.</p>
+		</div>
+	</footer>
+
+	<script src="/static/js/main.js"></script>
+</body>
+</html>
+{{end}}
+
+{{define "title"}}Dashboard{{end}}
+
+{{define "content"}}
+	<div class="dashboard-container">
+		<h2>Welcome to your Dashboard, {{.user.Name}}!</h2>
+		<p>This is your personal dashboard where you can manage your account and access your features.</p>
+
+		<div class="dashboard-stats">
+			<div class="stat-card">
+				<h3>Account Status</h3>
+				<p class="status-active">Active</p>
+			</div>
+
+			<div class="stat-card">
+				<h3>Member Since</h3>
+				<p>{{.user.CreatedAt.Format "January 2, 2006"}}</p>
+			</div>
+
+			<div class="stat-card">
+				<h3>Email</h3>
+				<p>{{.user.Email}}</p>
+			</div>
+		</div>
+
+		<div class="dashboard-actions">
+			<h3>Quick Actions</h3>
+			<div class="action-buttons">
+				<a href="/profile" class="btn btn-primary">Edit Profile</a>
+				<a href="/settings" class="btn btn-secondary">Account Settings</a>
+				<a href="/logout" class="btn btn-danger">Logout</a>
+			</div>
+		</div>
+
+		<div class="dashboard-info">
+			<h3>Recent Activity</h3>
+			<div class="activity-list">
+				<div class="activity-item">
+					<span class="activity-date">Today</span>
+					<span class="activity-text">Logged in to your account</span>
+				</div>
+				<div class="activity-item">
+					<span class="activity-date">Yesterday</span>
+					<span class="activity-text">Updated your profile information</span>
+				</div>
+				<div class="activity-item">
+					<span class="activity-date">3 days ago</span>
+					<span class="activity-text">Changed your password</span>
+				</div>
+			</div>
+		</div>
+	</div>
+{{end}}

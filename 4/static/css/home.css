@@ -1,0 +1,48 @@
+/* Home Page Styles */
+.user-details {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+}
+
+.action-buttons {
+    margin-top: 1.5rem;
+}
+
+.cta-container {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.feature-item {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    border-left: 4px solid #6a11cb;
+}
+
+.feature-item h4 {
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+}
+
+.feature-item p {
+    margin-bottom: 0;
+    color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+}

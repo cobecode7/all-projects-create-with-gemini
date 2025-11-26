@@ -1,0 +1,108 @@
+nohup: ignoring input
+2025/11/03 07:48:24 Database connection established
+
+2025/11/03 07:48:24 [32m/home/saleh/projects/gemini/ver-py-go/go.v1/go-ar-py/config/database.go:29
+[0m[33m[0.154ms] [34;1m[rows:-][0m SELECT count(*) FROM sqlite_master WHERE type='table' AND name="products"
+
+2025/11/03 07:48:24 [32m/home/saleh/projects/gemini/ver-py-go/go.v1/go-ar-py/config/database.go:29
+[0m[33m[0.234ms] [34;1m[rows:2][0m SELECT sql FROM sqlite_master WHERE type IN ("table","index") AND tbl_name = "products" AND sql IS NOT NULL order by type = "table" desc
+
+2025/11/03 07:48:24 [32m/home/saleh/projects/gemini/ver-py-go/go.v1/go-ar-py/config/database.go:29
+[0m[33m[0.109ms] [34;1m[rows:-][0m SELECT * FROM `products` LIMIT 1
+
+2025/11/03 07:48:24 [32m/home/saleh/projects/gemini/ver-py-go/go.v1/go-ar-py/config/database.go:29
+[0m[33m[0.128ms] [34;1m[rows:-][0m SELECT count(*) FROM sqlite_master WHERE type = "index" AND tbl_name = "products" AND name = "idx_products_deleted_at"
+
+2025/11/03 07:48:24 [32m/home/saleh/projects/gemini/ver-py-go/go.v1/go-ar-py/config/database.go:29
+[0m[33m[0.049ms] [34;1m[rows:-][0m SELECT count(*) FROM sqlite_master WHERE type='table' AND name="users"
+
+2025/11/03 07:48:24 [32m/home/saleh/projects/gemini/ver-py-go/go.v1/go-ar-py/config/database.go:29
+[0m[33m[0.182ms] [34;1m[rows:3][0m SELECT sql FROM sqlite_master WHERE type IN ("table","index") AND tbl_name = "users" AND sql IS NOT NULL order by type = "table" desc
+
+2025/11/03 07:48:24 [32m/home/saleh/projects/gemini/ver-py-go/go.v1/go-ar-py/config/database.go:29
+[0m[33m[0.280ms] [34;1m[rows:-][0m SELECT * FROM `users` LIMIT 1
+
+2025/11/03 07:48:24 [32m/home/saleh/projects/gemini/ver-py-go/go.v1/go-ar-py/config/database.go:29
+[0m[33m[0.078ms] [34;1m[rows:-][0m SELECT count(*) FROM sqlite_master WHERE type = "index" AND tbl_name = "users" AND name = "idx_users_email"
+
+2025/11/03 07:48:24 [32m/home/saleh/projects/gemini/ver-py-go/go.v1/go-ar-py/config/database.go:29
+[0m[33m[0.043ms] [34;1m[rows:-][0m SELECT count(*) FROM sqlite_master WHERE type = "index" AND tbl_name = "users" AND name = "idx_users_deleted_at"
+
+2025/11/03 07:48:24 [32m/home/saleh/projects/gemini/ver-py-go/go.v1/go-ar-py/config/database.go:29
+[0m[33m[0.039ms] [34;1m[rows:-][0m SELECT count(*) FROM sqlite_master WHERE type='table' AND name="orders"
+
+2025/11/03 07:48:24 [32m/home/saleh/projects/gemini/ver-py-go/go.v1/go-ar-py/config/database.go:29
+[0m[33m[0.167ms] [34;1m[rows:3][0m SELECT sql FROM sqlite_master WHERE type IN ("table","index") AND tbl_name = "orders" AND sql IS NOT NULL order by type = "table" desc
+
+2025/11/03 07:48:24 [32m/home/saleh/projects/gemini/ver-py-go/go.v1/go-ar-py/config/database.go:29
+[0m[33m[0.062ms] [34;1m[rows:-][0m SELECT * FROM `orders` LIMIT 1
+
+2025/11/03 07:48:24 [32m/home/saleh/projects/gemini/ver-py-go/go.v1/go-ar-py/config/database.go:29
+[0m[33m[0.083ms] [34;1m[rows:-][0m SELECT count(*) FROM sqlite_master WHERE type = "table" AND tbl_name = "orders" AND (sql LIKE "%CONSTRAINT ""fk_orders_user"" %" OR sql LIKE "%CONSTRAINT fk_orders_user %" OR sql LIKE "%CONSTRAINT `fk_orders_user`%" OR sql LIKE "%CONSTRAINT [fk_orders_user]%" OR sql LIKE "%CONSTRAINT 	fk_orders_user	%")
+
+2025/11/03 07:48:24 [32m/home/saleh/projects/gemini/ver-py-go/go.v1/go-ar-py/config/database.go:29
+[0m[33m[0.045ms] [34;1m[rows:-][0m SELECT count(*) FROM sqlite_master WHERE type = "index" AND tbl_name = "orders" AND name = "idx_orders_user_id"
+
+2025/11/03 07:48:24 [32m/home/saleh/projects/gemini/ver-py-go/go.v1/go-ar-py/config/database.go:29
+[0m[33m[0.049ms] [34;1m[rows:-][0m SELECT count(*) FROM sqlite_master WHERE type = "index" AND tbl_name = "orders" AND name = "idx_orders_deleted_at"
+
+2025/11/03 07:48:24 [32m/home/saleh/projects/gemini/ver-py-go/go.v1/go-ar-py/config/database.go:29
+[0m[33m[0.040ms] [34;1m[rows:-][0m SELECT count(*) FROM sqlite_master WHERE type='table' AND name="order_items"
+
+2025/11/03 07:48:24 [32m/home/saleh/projects/gemini/ver-py-go/go.v1/go-ar-py/config/database.go:29
+[0m[33m[0.143ms] [34;1m[rows:3][0m SELECT sql FROM sqlite_master WHERE type IN ("table","index") AND tbl_name = "order_items" AND sql IS NOT NULL order by type = "table" desc
+
+2025/11/03 07:48:24 [32m/home/saleh/projects/gemini/ver-py-go/go.v1/go-ar-py/config/database.go:29
+[0m[33m[0.082ms] [34;1m[rows:-][0m SELECT * FROM `order_items` LIMIT 1
+
+2025/11/03 07:48:24 [32m/home/saleh/projects/gemini/ver-py-go/go.v1/go-ar-py/config/database.go:29
+[0m[33m[0.088ms] [34;1m[rows:-][0m SELECT count(*) FROM sqlite_master WHERE type = "table" AND tbl_name = "order_items" AND (sql LIKE "%CONSTRAINT ""fk_order_items_product"" %" OR sql LIKE "%CONSTRAINT fk_order_items_product %" OR sql LIKE "%CONSTRAINT `fk_order_items_product`%" OR sql LIKE "%CONSTRAINT [fk_order_items_product]%" OR sql LIKE "%CONSTRAINT 	fk_order_items_product	%")
+
+2025/11/03 07:48:24 [32m/home/saleh/projects/gemini/ver-py-go/go.v1/go-ar-py/config/database.go:29
+[0m[33m[0.060ms] [34;1m[rows:-][0m SELECT count(*) FROM sqlite_master WHERE type = "table" AND tbl_name = "order_items" AND (sql LIKE "%CONSTRAINT ""fk_orders_order_items"" %" OR sql LIKE "%CONSTRAINT fk_orders_order_items %" OR sql LIKE "%CONSTRAINT `fk_orders_order_items`%" OR sql LIKE "%CONSTRAINT [fk_orders_order_items]%" OR sql LIKE "%CONSTRAINT 	fk_orders_order_items	%")
+
+2025/11/03 07:48:24 [32m/home/saleh/projects/gemini/ver-py-go/go.v1/go-ar-py/config/database.go:29
+[0m[33m[0.076ms] [34;1m[rows:-][0m SELECT count(*) FROM sqlite_master WHERE type = "index" AND tbl_name = "order_items" AND name = "idx_order_items_order_id"
+
+2025/11/03 07:48:24 [32m/home/saleh/projects/gemini/ver-py-go/go.v1/go-ar-py/config/database.go:29
+[0m[33m[0.045ms] [34;1m[rows:-][0m SELECT count(*) FROM sqlite_master WHERE type = "index" AND tbl_name = "order_items" AND name = "idx_order_items_product_id"
+
+2025/11/03 07:48:24 [32m/home/saleh/projects/gemini/ver-py-go/go.v1/go-ar-py/config/database.go:29
+[0m[33m[0.054ms] [34;1m[rows:-][0m SELECT count(*) FROM sqlite_master WHERE type='table' AND name="carts"
+
+2025/11/03 07:48:24 [32m/home/saleh/projects/gemini/ver-py-go/go.v1/go-ar-py/config/database.go:29
+[0m[33m[0.155ms] [34;1m[rows:2][0m SELECT sql FROM sqlite_master WHERE type IN ("table","index") AND tbl_name = "carts" AND sql IS NOT NULL order by type = "table" desc
+
+2025/11/03 07:48:24 [32m/home/saleh/projects/gemini/ver-py-go/go.v1/go-ar-py/config/database.go:29
+[0m[33m[0.052ms] [34;1m[rows:-][0m SELECT * FROM `carts` LIMIT 1
+
+2025/11/03 07:48:24 [32m/home/saleh/projects/gemini/ver-py-go/go.v1/go-ar-py/config/database.go:29
+[0m[33m[0.235ms] [34;1m[rows:-][0m SELECT count(*) FROM sqlite_master WHERE type = "table" AND tbl_name = "carts" AND (sql LIKE "%CONSTRAINT ""fk_carts_user"" %" OR sql LIKE "%CONSTRAINT fk_carts_user %" OR sql LIKE "%CONSTRAINT `fk_carts_user`%" OR sql LIKE "%CONSTRAINT [fk_carts_user]%" OR sql LIKE "%CONSTRAINT 	fk_carts_user	%")
+
+2025/11/03 07:48:24 [32m/home/saleh/projects/gemini/ver-py-go/go.v1/go-ar-py/config/database.go:29
+[0m[33m[0.047ms] [34;1m[rows:-][0m SELECT count(*) FROM sqlite_master WHERE type = "index" AND tbl_name = "carts" AND name = "idx_carts_user_id"
+
+2025/11/03 07:48:24 [32m/home/saleh/projects/gemini/ver-py-go/go.v1/go-ar-py/config/database.go:29
+[0m[33m[0.039ms] [34;1m[rows:-][0m SELECT count(*) FROM sqlite_master WHERE type='table' AND name="cart_items"
+
+2025/11/03 07:48:24 [32m/home/saleh/projects/gemini/ver-py-go/go.v1/go-ar-py/config/database.go:29
+[0m[33m[0.143ms] [34;1m[rows:3][0m SELECT sql FROM sqlite_master WHERE type IN ("table","index") AND tbl_name = "cart_items" AND sql IS NOT NULL order by type = "table" desc
+
+2025/11/03 07:48:24 [32m/home/saleh/projects/gemini/ver-py-go/go.v1/go-ar-py/config/database.go:29
+[0m[33m[0.050ms] [34;1m[rows:-][0m SELECT * FROM `cart_items` LIMIT 1
+
+2025/11/03 07:48:24 [32m/home/saleh/projects/gemini/ver-py-go/go.v1/go-ar-py/config/database.go:29
+[0m[33m[0.241ms] [34;1m[rows:-][0m SELECT count(*) FROM sqlite_master WHERE type = "table" AND tbl_name = "cart_items" AND (sql LIKE "%CONSTRAINT ""fk_cart_items_product"" %" OR sql LIKE "%CONSTRAINT fk_cart_items_product %" OR sql LIKE "%CONSTRAINT `fk_cart_items_product`%" OR sql LIKE "%CONSTRAINT [fk_cart_items_product]%" OR sql LIKE "%CONSTRAINT 	fk_cart_items_product	%")
+
+2025/11/03 07:48:24 [32m/home/saleh/projects/gemini/ver-py-go/go.v1/go-ar-py/config/database.go:29
+[0m[33m[0.056ms] [34;1m[rows:-][0m SELECT count(*) FROM sqlite_master WHERE type = "table" AND tbl_name = "cart_items" AND (sql LIKE "%CONSTRAINT ""fk_carts_cart_items"" %" OR sql LIKE "%CONSTRAINT fk_carts_cart_items %" OR sql LIKE "%CONSTRAINT `fk_carts_cart_items`%" OR sql LIKE "%CONSTRAINT [fk_carts_cart_items]%" OR sql LIKE "%CONSTRAINT 	fk_carts_cart_items	%")
+
+2025/11/03 07:48:24 [32m/home/saleh/projects/gemini/ver-py-go/go.v1/go-ar-py/config/database.go:29
+[0m[33m[0.064ms] [34;1m[rows:-][0m SELECT count(*) FROM sqlite_master WHERE type = "index" AND tbl_name = "cart_items" AND name = "idx_cart_items_cart_id"
+
+2025/11/03 07:48:24 [32m/home/saleh/projects/gemini/ver-py-go/go.v1/go-ar-py/config/database.go:29
+[0m[33m[0.045ms] [34;1m[rows:-][0m SELECT count(*) FROM sqlite_master WHERE type = "index" AND tbl_name = "cart_items" AND name = "idx_cart_items_product_id"
+2025/11/03 07:48:24 Database migration completed
+2025/11/03 07:48:24 Starting server on port 8080
+2025/11/03 07:48:24 Failed to start server: listen tcp :8080: bind: address already in use
+exit status 1

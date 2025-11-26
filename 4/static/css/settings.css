@@ -1,0 +1,105 @@
+/* Settings Page Styles */
+.settings-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.settings-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.settings-section {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.settings-section h3 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.settings-section h3:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+}
+
+.danger-zone {
+    border-left: 4px solid #e74c3c;
+}
+
+.danger-zone h3 {
+    color: #e74c3c;
+}
+
+.danger-zone h3:after {
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+}
+
+.danger-zone p {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.danger-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.btn-danger {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #c0392b;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 10px;
+    width: auto;
+}
+
+.action-buttons {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .settings-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .danger-zone {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .settings-section {
+        padding: 1.5rem;
+    }
+
+    .danger-actions {
+        flex-direction: column;
+    }
+}

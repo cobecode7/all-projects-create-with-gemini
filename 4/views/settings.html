@@ -1,0 +1,80 @@
+{{define "title"}}Settings{{end}}
+
+{{define "content"}}
+	<div class="notification" id="settings-message"></div>
+
+	<div class="user-info">
+		<h2>Account Settings</h2>
+		<p>Manage your account preferences and privacy settings.</p>
+	</div>
+
+	<div class="settings-container">
+		<div class="settings-section">
+			<h3>Notification Preferences</h3>
+			<form action="/settings/notifications" method="post" id="notifications-form">
+				<div class="form-group">
+					<div class="checkbox-group">
+						<label>
+							<input type="checkbox" name="email-notifications" {{if .user.EmailNotifications}}checked{{end}}>
+							Receive email notifications
+						</label>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="checkbox-group">
+						<label>
+							<input type="checkbox" name="security-alerts" {{if .user.SecurityAlerts}}checked{{end}}>
+							Receive security alerts
+						</label>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<input type="submit" value="Save Preferences" class="btn btn-primary">
+				</div>
+			</form>
+		</div>
+
+		<div class="settings-section">
+			<h3>Privacy Settings</h3>
+			<form action="/settings/privacy" method="post" id="privacy-form">
+				<div class="form-group">
+					<div class="checkbox-group">
+						<label>
+							<input type="checkbox" name="profile-visibility" {{if .user.ProfileVisibility}}checked{{end}}>
+							Make profile visible to other users
+						</label>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="checkbox-group">
+						<label>
+							<input type="checkbox" name="show-email" {{if .user.ShowEmail}}checked{{end}}>
+							Show email address in profile
+						</label>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<input type="submit" value="Update Privacy Settings" class="btn btn-primary">
+				</div>
+			</form>
+		</div>
+
+		<div class="settings-section danger-zone">
+			<h3>Danger Zone</h3>
+			<p>These actions are irreversible. Please be careful.</p>
+			<div class="danger-actions">
+				<button type="button" class="btn btn-danger" id="deactivate-account">Deactivate Account</button>
+				<button type="button" class="btn btn-danger" id="delete-account">Delete Account</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="action-buttons">
+		<a href="/profile" class="btn btn-secondary">Back to Profile</a>
+		<a href="/logout" class="logout-btn">Logout</a>
+	</div>
+{{end}}

@@ -1,0 +1,60 @@
+{{define "title"}}Home{{end}}
+
+{{define "content"}}
+	{{if .user.Name}}
+		<div class="user-info">
+			<h2>Welcome back, {{.user.Name}}!</h2>
+			<p>You are successfully logged in to your account.</p>
+			<div class="user-details">
+				<p><strong>Email:</strong> {{.user.Email}}</p>
+				<p><strong>Account Status:</strong> <span style="color: #27ae60;">Active</span></p>
+			</div>
+			<div class="action-buttons">
+				<a href="/profile" class="btn btn-primary">View Profile</a>
+				<a href="/settings" class="btn btn-secondary">Account Settings</a>
+				<a href="/logout" class="logout-btn">Logout</a>
+			</div>
+		</div>
+		
+		<div class="features">
+			<h3>What can you do next?</h3>
+			<ul>
+				<li><a href="/dashboard">Visit your dashboard</a></li>
+				<li><a href="/profile">Update your profile information</a></li>
+				<li><a href="/settings">Configure your account settings</a></li>
+				<li><a href="/help">Get help and support</a></li>
+			</ul>
+		</div>
+	{{else}}
+		<div class="guest-info">
+			<h2>Welcome to Gemini Project</h2>
+			<p>This is a modern web application built with Go/Gin framework that provides secure user authentication and management.</p>
+			<div class="cta-container">
+				<a href="/register" class="btn btn-primary btn-large">Create Account</a>
+				<p>Already have an account? <a href="/login">Sign in</a></p>
+			</div>
+		</div>
+		
+		<div class="features">
+			<h3>Features of this application:</h3>
+			<div class="feature-grid">
+				<div class="feature-item">
+					<h4>🔐 Secure Authentication</h4>
+					<p>User registration and login with encrypted password storage</p>
+				</div>
+				<div class="feature-item">
+					<h4>🛡️ Advanced Security</h4>
+					<p>Passwords are securely hashed using bcrypt</p>
+				</div>
+				<div class="feature-item">
+					<h4>📱 Responsive Design</h4>
+					<p>Works seamlessly on desktop, tablet and mobile devices</p>
+				</div>
+				<div class="feature-item">
+					<h4>⚡ High Performance</h4>
+					<p>Built with Go/Gin framework for optimal speed</p>
+				</div>
+			</div>
+		</div>
+	{{end}}
+{{end}}

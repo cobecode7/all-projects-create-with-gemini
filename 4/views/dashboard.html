@@ -1,0 +1,52 @@
+{{define "title"}}Dashboard{{end}}
+
+{{define "content"}}
+	<div class="dashboard-container">
+		<h2>Welcome to your Dashboard, {{.user.Name}}!</h2>
+		<p>This is your personal dashboard where you can manage your account and access your features.</p>
+
+		<div class="dashboard-stats">
+			<div class="stat-card">
+				<h3>Account Status</h3>
+				<p class="status-active">Active</p>
+			</div>
+
+			<div class="stat-card">
+				<h3>Member Since</h3>
+				<p>{{.user.CreatedAt.Format "January 2, 2006"}}</p>
+			</div>
+
+			<div class="stat-card">
+				<h3>Email</h3>
+				<p>{{.user.Email}}</p>
+			</div>
+		</div>
+
+		<div class="dashboard-actions">
+			<h3>Quick Actions</h3>
+			<div class="action-buttons">
+				<a href="/profile" class="btn btn-primary">Edit Profile</a>
+				<a href="/settings" class="btn btn-secondary">Account Settings</a>
+				<a href="/logout" class="btn btn-danger">Logout</a>
+			</div>
+		</div>
+
+		<div class="dashboard-info">
+			<h3>Recent Activity</h3>
+			<div class="activity-list">
+				<div class="activity-item">
+					<span class="activity-date">Today</span>
+					<span class="activity-text">Logged in to your account</span>
+				</div>
+				<div class="activity-item">
+					<span class="activity-date">Yesterday</span>
+					<span class="activity-text">Updated your profile information</span>
+				</div>
+				<div class="activity-item">
+					<span class="activity-date">3 days ago</span>
+					<span class="activity-text">Changed your password</span>
+				</div>
+			</div>
+		</div>
+	</div>
+{{end}}

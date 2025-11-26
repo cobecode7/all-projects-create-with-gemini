@@ -1,0 +1,60 @@
+{{define "title"}}Profile{{end}}
+
+{{define "content"}}
+	<div class="notification" id="profile-message"></div>
+
+	<div class="user-info">
+		<h2>Your Profile</h2>
+		<p>Manage your personal information and account settings.</p>
+	</div>
+
+	<div class="profile-container">
+		<div class="profile-section">
+			<h3>Personal Information</h3>
+			<form action="/profile/update" method="post" id="profile-form">
+				<div class="form-group">
+					<label for="name">Full Name:</label>
+					<input type="text" id="name" name="name" value="{{.user.Name}}" required>
+				</div>
+
+				<div class="form-group">
+					<label for="email">Email:</label>
+					<input type="email" id="email" name="email" value="{{.user.Email}}" required>
+				</div>
+
+				<div class="form-group">
+					<input type="submit" value="Update Profile" class="btn btn-primary">
+				</div>
+			</form>
+		</div>
+
+		<div class="profile-section">
+			<h3>Change Password</h3>
+			<form action="/profile/password" method="post" id="password-form">
+				<div class="form-group">
+					<label for="current-password">Current Password:</label>
+					<input type="password" id="current-password" name="current-password" required>
+				</div>
+
+				<div class="form-group">
+					<label for="new-password">New Password:</label>
+					<input type="password" id="new-password" name="new-password" required>
+				</div>
+
+				<div class="form-group">
+					<label for="confirm-password">Confirm New Password:</label>
+					<input type="password" id="confirm-password" name="confirm-password" required>
+				</div>
+
+				<div class="form-group">
+					<input type="submit" value="Change Password" class="btn btn-primary">
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div class="action-buttons">
+		<a href="/settings" class="btn btn-secondary">Account Settings</a>
+		<a href="/logout" class="logout-btn">Logout</a>
+	</div>
+{{end}}

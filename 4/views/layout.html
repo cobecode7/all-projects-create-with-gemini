@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{{ template "title" . }} - Gemini Project</title>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="/static/css/layout.css">
+	<link rel="stylesheet" href="/static/css/{{ template "title" . }}.css">
+</head>
+<body>
+	<header>
+		<div class="container">
+			<h1>Gemini Project</h1>
+			<p>A modern web application built with Go/Gin Framework</p>
+		</div>
+	</header>
+	
+	<main>
+		<div class="container">
+			{{ template "content" . }}
+		</div>
+	</main>
+	
+	<footer>
+		<div class="container">
+			<p>&copy; 2023 Gemini Project. All rights reserved.</p>
+		</div>
+	</footer>
+	
+	<script src="/static/js/main.js"></script>
+</body>
+</html>

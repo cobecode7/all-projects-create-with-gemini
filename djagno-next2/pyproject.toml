@@ -1,0 +1,53 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ecommerce-platform"
+version = "0.1.0"
+description = "متجر إلكتروني متكامل"
+authors = [
+    {name = "Your Name", email = "your.email@example.com"},
+]
+dependencies = [
+    "django>=5.0.0",
+    "djangorestframework>=3.14.0",
+    "djangorestframework-simplejwt>=5.3.0",
+    "django-cors-headers>=4.3.0",
+    "django-storages>=1.14.0",
+    "django-filter>=23.3.0",
+    "python-decouple>=3.8",
+    "celery>=5.3.0",
+    "redis>=5.0.0",
+    "psycopg2-binary>=2.9.0",
+    "pillow>=10.1.0",
+    "django-environ>=0.11.0",
+]
+requires-python = ">=3.11"
+readme = "README.md"
+license = {text = "MIT"}
+
+[tool.uv]
+dev-dependencies = [
+    "ruff>=0.1.0",
+    "pytest>=7.4.0",
+    "pytest-django>=4.5.0",
+    "mypy>=1.6.0",
+    "django-stubs>=4.2.0",
+    "coverage>=7.3.0",
+    "factory-boy>=3.3.0",
+]
+
+[tool.ruff]
+select = ["E", "F", "W", "I", "N", "UP", "YTT", "S", "BLE", "FBT", "B", "A", "COM", "C4", "DTZ", "T10", "EM", "EXE", "ISC", "ICN", "G", "INP", "PIE", "T20", "PYI", "PT", "Q", "RSE", "RET", "SLF", "SIM", "TID", "TCH", "INT", "ARG", "PTH", "PL", "TRY", "FLY", "NPY", "AIR", "PERF", "FIX", "RUF"]
+ignore = ["ANN101", "ANN102", "S101", "D100", "D104"]
+
+[tool.ruff.per-file-ignores]
+"__init__.py" = ["F401"]
+"tests/*" = ["S101", "INP001"]
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true

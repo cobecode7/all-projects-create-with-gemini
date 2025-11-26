@@ -1,0 +1,64 @@
+{{define "base.html"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{{.title}} - Gemini Project</title>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="/static/css/layout.css">
+	<link rel="stylesheet" href="/static/css/{{.title}}.css">
+</head>
+<body>
+	<header>
+		<div class="container">
+			<h1>Gemini Project</h1>
+			<p>A modern web application built with Go/Gin Framework</p>
+		</div>
+	</header>
+
+	<main>
+		<div class="container">
+			{{template "content" .}}
+		</div>
+	</main>
+
+	<footer>
+		<div class="container">
+			<p>&copy; 2023 Gemini Project. All rights reserved.</p>
+		</div>
+	</footer>
+
+	<script src="/static/js/main.js"></script>
+</body>
+</html>
+{{end}}
+
+{{define "title"}}Login{{end}}
+
+{{define "content"}}
+	<div class="notification" id="login-error"></div>
+
+	<h2>Login to Your Account</h2>
+	<p>Enter your email and password to access your account.</p>
+
+	<form action="/login" method="post" id="login-form">
+		<div class="form-group">
+			<label for="email">Email:</label>
+			<input type="email" id="email" name="email" placeholder="Enter your email" required>
+		</div>
+
+		<div class="form-group">
+			<label for="password">Password:</label>
+			<input type="password" id="password" name="password" placeholder="Enter your password" required>
+		</div>
+
+		<div class="form-group">
+			<input type="submit" value="Login">
+		</div>
+	</form>
+
+	<p>Don't have an account? <a href="/register">Register here</a>.</p>
+
+	<p><a href="/forgot-password">Forgot your password?</a></p>
+{{end}}
